@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var magazzino = 100;
+        let cappotti_s=20;
+        let cappotti_m=20;
+        let cappotti_l=20;
+        let cappotti_xl=20;
+        let cappotti_xxl=20;
+
+
+
+        let cappotto = prompt("inserisci taglia di cappotto(s, m, l, xl, xxl): ").toLowerCase().trim();
+
+
+        let num_cappotti=parseInt(prompt("inserisci quanti cappotti della taglia scelta prendere:"));
+
+
+
+        if (cappotto === null || cappotto.trim() === "" ) {
+            alert("inserire una taglia valida")
+        } else {
+            switch (cappotto) {
+                case "s":
+                if (cappotti_s-num_cappotti>0) {
+                    cappotti_s=cappotti_s-num_cappotti
+                    magazzino=magazzino-cappotti_s
+                    alert(`i cappotti taglia s rimanenti in magazzino sono ${cappotti_s} e i cappotti totali rimanenti sono ${magazzino}`)
+
+                } else {
+                    alert(`il numero di cappotti inseriti ${num_cappotti} supera la disponibilità per la taglia(${cappotti_s})`)
+
+                }
+
+
+                break;
+                case "m":
+                if (cappotti_m-num_cappotti>0) {
+                    cappotti_m=cappotti_s-num_cappotti
+                    magazzino=magazzino-cappotti_m
+                    alert(`i cappotti taglia s rimanenti in magazzino sono ${cappotti_m} e i cappotti totali rimanenti sono ${magazzino}`)
+
+                } else {
+                    alert(`il numero di cappotti inseriti ${num_cappotti} supera la disponibilità per la taglia(${cappotti_m})`)
+
+                }
+
+                break;
+                case "l":
+                if (cappotti_l-num_cappotti>0) {
+                    cappotti_l=cappotti_s-num_cappotti
+                    magazzino=magazzino-cappotti_l
+                    alert(`i cappotti taglia s rimanenti in magazzino sono ${cappotti_l} e i cappotti totali rimanenti sono ${magazzino}`)
+
+                } else {
+                    alert(`il numero di cappotti inseriti ${num_cappotti} supera la disponibilità per la taglia(${cappotti_l})`)
+
+                }
+
+                break;
+                case "xl":
+                if (cappotti_xl-num_cappotti>0) {
+                    cappotti_xl=cappotti_s-num_cappotti
+                    magazzino=magazzino-cappotti_xl
+                    alert(`i cappotti taglia s rimanenti in magazzino sono ${cappotti_xl} e i cappotti totali rimanenti sono ${magazzino}`)
+
+                } else {
+                    alert(`il numero di cappotti inseriti ${num_cappotti} supera la disponibilità per la taglia(${cappotti_xl})`)
+
+                }
+
+                break;
+                case "xxl":
+                if (cappotti_xxl-num_cappotti>0) {
+                    cappotti_xxl=cappotti_s-num_cappotti
+                    magazzino=magazzino-cappotti_xxl
+                    alert(`i cappotti taglia s rimanenti in magazzino sono ${cappotti_xxl} e i cappotti totali rimanenti sono ${magazzino}`)
+
+                } else {
+                    alert(`il numero di cappotti inseriti ${num_cappotti} supera la disponibilità per la taglia(${cappotti_xxl})`)
+
+                }
+
+                break;
+                default:
+                alert("taglia non disponibile")
+            }
+
+        }
+        alert("numero articoli rimanenti in magazzino: "+ magazzino)
+
+
+    </script>
+</body>
+</html>
